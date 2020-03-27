@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
     height: 100%;
@@ -9,6 +12,9 @@ a{
     color: #ededed;
 }
 .header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     background-color: #000;
     color: #ffffff;
     border-color: #080808;
@@ -70,6 +76,11 @@ a{
     padding: 10px 16px;     
     font-size: 18px;     
     border-radius: 6px;
+    filter: brightness(100%);
+    transition: .5s
+}
+.button:hover{
+    filter: brightness(115%);
 }
 .container{
     width: 90%;
