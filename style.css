@@ -82,16 +82,48 @@ a{
     padding: 4px;
     margin-bottom: 20px;
     line-height: 1.42857143;
-    background-color: #fff;
+    background-color: #eee;
     border: 1px solid #ddd;
     border-radius: 4px;
     float: left;
     margin-left: 1%;
+    overflow:hidden;
 }
 .thumbnail{
     display: block;
     max-width: 100%;
+    max-height: auto;
+    width: auto;
+}
+.noflow{
+    display: block;
+    max-height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center
+}
+.noflow p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    opacity: 0;
+    transition: 0.5s;
+}
+.noflow:hover p{
+    opacity: 1;
+}
+.noflow img{
+    max-width: 100%;
+    transition: all 1.0s;
+    display: block;
+    width: 100%;
     height: auto;
+    transform: scale(1);
+}
+.noflow:hover img{
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    filter: brightness(40%);
 }
 .caption{
     color: #000;
